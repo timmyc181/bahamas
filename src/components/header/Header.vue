@@ -9,15 +9,9 @@
 
 <template>
 	<nav>
-		<RouterLink to="/">
-			<HeaderOption>Home</HeaderOption>
-		</RouterLink>
-		<RouterLink to="/dock">
-			<HeaderOption>Dock</HeaderOption>
-		</RouterLink>
-		<RouterLink to="/turtles-nest">
-			<HeaderOption>Turtles nest</HeaderOption>
-		</RouterLink>
+		<HeaderOption to="/">Home</HeaderOption>
+		<HeaderOption to="/dock">Dock</HeaderOption>
+		<HeaderOption to="/turtles-nest">Turtles nest</HeaderOption>
 	</nav>
 </template>
 
@@ -25,5 +19,10 @@
 	nav {
 		display: flex;
 		gap: 40px;
+		
+		background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+		width: 100%;
+		height: 100px;
+		padding: 30px 60px;
 	}
 </style>

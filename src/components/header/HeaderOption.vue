@@ -1,19 +1,22 @@
 <template>
-	<div>
+	<RouterLink :to="to">
 		<slot></slot>
-	</div>
+	</RouterLink>
+
 </template>
 
 <script>
 	export default {
-		name: "HeaderOption"
+		name: "HeaderOption",
+		props: ['to']
 	}
 </script>
 
 <style scoped>
-	div {
-		font-size: 20px;
+	a {
 		color: white;
-		//font-weight: bold;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 600;
 	}
 </style>
