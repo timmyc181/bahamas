@@ -17,6 +17,6 @@
 		color: white;
 		text-decoration: none;
 		font-size: 16px;
-		font-weight: 600;
+		font-weight: 700;
 	}
 </style>
