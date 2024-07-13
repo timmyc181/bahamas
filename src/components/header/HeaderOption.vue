@@ -16,7 +16,7 @@
 	a {
 		color: white;
 		text-decoration: none;
-		font-size: 16px;
-		font-weight: 700;
+		font: 500 16px Lexend;
+		
 	}
 </style>

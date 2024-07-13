@@ -12,9 +12,9 @@
 		<div class="title">
 			<slot name="title"></slot>
 		</div>
-		<div class="description">
-			<slot name="description"></slot>
-		</div>
+<!--		<div class="description">-->
+<!--			<slot name="description"></slot>-->
+<!--		</div>-->
 		<LandingPageButton>
 			<slot name="action"></slot>
 		</LandingPageButton>
@@ -26,19 +26,21 @@
 		display: flex;
 		flex-direction: column;
 		position: absolute;
-		align-items: flex-start;
+		justify-content: center;
+		align-items: center;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 40px var(--side-padding) 80px;
-		background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6));
+		top: 0;
+		flex: 1;
+		//padding: 40px var(--side-padding) 80px;
 	}
 	
 	.title {
-		font-size: 36px;
-		font-weight: bold;
-		color: white;
-		margin-bottom: 10px;
+		font: bold 96px Anybody;
+		color: var(--turtle-nest-primary);
+		margin-bottom: 20px;
+		text-shadow: 0 0 20px rgba(0,0,0,0.3);
 	}
 	
 	.description {

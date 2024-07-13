@@ -15,7 +15,7 @@
 	<section id="turtles-nest">
 		<FullScreenImage :path="imgUrl">
 			<LandingPageContent>
-				<template #title>Turtles Nest</template>
+				<template #title>Turtle Nest</template>
 				<template #description>A cool house</template>
 				<template #action>Book now</template>
 			</LandingPageContent>
@@ -27,5 +27,10 @@
 	#turtles-nest {
 		width: 100%;
 		height: 100%;
+	}
+	
+	#turtles-nest >>> .overlay {
+		background: rgba(6, 25, 0, 0.25);
+		
 	}
 </style>
