@@ -1,23 +1,19 @@
 <script>
+	import FullScreenImage from '@/components/misc/FullScreenImage.vue'
+	import seaWhipImageUrl from '@/assets/sea-whip.jpeg'
+	
 	export default {
-		name: "LandingPage"
+		name: "LandingPage",
+		data() { return { seaWhipImageUrl: seaWhipImageUrl } },
+		components: {FullScreenImage}
 	}
 </script>
 
 <template>
-	<section id="landing-page">
+	<FullScreenImage :path="seaWhipImageUrl">
 	
-	</section>
+	</FullScreenImage>
 </template>
 
 <style scoped>
-	#landing-page {
-		width: 100%;
-		height: 100%;
-		
-		background-image: url('../assets/sea-whip.jpeg');
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-	}
 </style>

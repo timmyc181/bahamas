@@ -23,6 +23,6 @@
 		background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
 		width: 100%;
 		height: 100px;
-		padding: 30px 60px;
+		padding: 30px var(--side-padding);
 	}
 </style>
