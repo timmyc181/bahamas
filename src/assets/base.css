@@ -1,8 +1,8 @@
 :root {
-  --turtle-nest-primary: rgb(197, 255, 134);
-  --turtle-nest-secondary: rgb(252, 255, 153);
-  
-  --side-padding: 100px;
+	--turtle-nest-primary: rgb(197, 255, 134);
+	--turtle-nest-secondary: rgb(252, 255, 153);
+	
+	--side-padding: 80px;
 }
 
 /* semantic color variables for this project */
@@ -17,38 +17,43 @@
 /*}*/
 
 @font-face {
-  font-family: Anybody;
-  src: url('./Anybody-Variable.ttf');
-  font-weight: bold;
+	font-family: Anybody;
+	src: url('./Anybody-Variable.ttf');
+	font-weight: bold;
 }
 
 @font-face {
-  font-family: Lexend;
-  src: url('./Lexend-Variable.ttf');
-  /*font-weight: bold;*/
+	font-family: Lexend;
+	src: url('./Lexend-Variable.ttf');
+	/*font-weight: bold;*/
 }
 
 html, body {
-  height: 100%;
+	height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: Lexend, serif;
-  /*font-family:*/
-  /*  Inter,*/
-  /*  -apple-system,*/
-  /*  BlinkMacSystemFont,*/
-  /*  'Segoe UI',*/
-  /*  Roboto,*/
-  /*  Oxygen,*/
-  /*  Ubuntu,*/
-  /*  Cantarell,*/
-  /*  'Fira Sans',*/
-  /*  'Droid Sans',*/
-  /*  'Helvetica Neue',*/
-  /*  sans-serif;*/
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	/*font-family:*/
+	/*  Inter,*/
+	/*  -apple-system,*/
+	/*  BlinkMacSystemFont,*/
+	/*  'Segoe UI',*/
+	/*  Roboto,*/
+	/*  Oxygen,*/
+	/*  Ubuntu,*/
+	/*  Cantarell,*/
+	/*  'Fira Sans',*/
+	/*  'Droid Sans',*/
+	/*  'Helvetica Neue',*/
+	/*  sans-serif;*/
+
+}
+
+* {
+	font-family: Lexend, serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
 }

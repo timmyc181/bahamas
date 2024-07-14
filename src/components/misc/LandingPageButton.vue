@@ -20,7 +20,6 @@
 		padding: 16px 30px;
 		cursor: pointer;
 		flex: 0;
-		//background: rgba(0,0,0,0.1);
 		background: none;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 		position: relative;

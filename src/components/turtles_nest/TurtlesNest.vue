@@ -12,7 +12,7 @@
 </script>
 
 <template>
-	<section id="turtles-nest">
+	<section id="turtle-nest">
 		<FullScreenImage :path="imgUrl">
 			<LandingPageContent>
 				<template #title>Turtle Nest</template>
@@ -24,13 +24,13 @@
 </template>
 
 <style scoped>
-	#turtles-nest {
+	#turtle-nest {
 		width: 100%;
 		height: 100%;
 	}
 	
-	#turtles-nest >>> .overlay {
-		background: rgba(6, 25, 0, 0.25);
+	#turtle-nest >>> .overlay {
+		background: rgba(6, 25, 0, 0.3);
 		
 	}
 </style>

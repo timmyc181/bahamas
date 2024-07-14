@@ -1,16 +1,32 @@
 <script>
 import Header from '@/components/header/Header.vue'
-import TheWelcome from './components/TheWelcome.vue'
 
 export default {
 	name: "App",
-	components: {Header}
+	components: {Header},
+	computed: {
+		headerStyle() {
+			console.log(this.$route.path)
+			switch (this.$route.path) {
+				case '/':
+					return 'light'
+				case '/turtle-nest':
+					return 'dark'
+				case '/dock':
+					return 'dark'
+				case '/contact':
+					return 'light'
+				default:
+					return 'light'
+			}
+		}
+	}
 }
 </script>
 
 <template>
 	<header>
-		<Header/>
+		<Header :headerStyle="headerStyle"/>
 	</header>
 
   <main>
