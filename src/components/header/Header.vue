@@ -34,7 +34,7 @@
 		display: flex;
 		
 		width: 100%;
-		padding: 30px var(--side-padding);
+		padding: 30px var(--side-padding) 0;
 		position: relative;
 	}
 	
@@ -65,6 +65,7 @@
 		opacity: 0;
 		top: 0;
 		left: 0;
+		pointer-events: none;
 	}
 	
 	nav.dark::before {
