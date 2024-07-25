@@ -12,7 +12,7 @@
 	<nav :class="headerStyle">
 		<div class="leading">
 			<RouterLink to="/">
-				<img src="@/assets/storr-villas.svg" alt="logo" height="25"/>
+				<img src="@/assets/storr-villas.svg" alt="logo" height="16"/>
 			</RouterLink>
 		</div>
 		

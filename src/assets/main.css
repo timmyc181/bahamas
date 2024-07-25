@@ -8,6 +8,7 @@
 body {
 	position: relative;
 	/*background: #f9f7f0;*/
+	
 }
 
 @media (min-width: 1024px) {
@@ -23,7 +24,6 @@ body {
 }
 
 button {
-	--button-accent: rgb(0, 164, 187);
 	border: 3px var(--button-accent) solid;
 	color: var(--button-accent);
 	border-radius: 0;

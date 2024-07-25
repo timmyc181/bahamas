@@ -1,8 +1,11 @@
 :root {
 	--turtle-nest-primary: rgb(197, 255, 134);
 	--turtle-nest-secondary: rgb(252, 255, 153);
+	--dock-secondary: #FFC0B7;
 	
 	--side-padding: 80px;
+	--button-accent: rgb(0, 164, 187);
+	
 }
 
 /* semantic color variables for this project */

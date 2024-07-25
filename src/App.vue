@@ -6,7 +6,6 @@
 		components: {Header},
 		computed: {
 			headerStyle() {
-				console.log(this.$route.path)
 				switch (this.$route.path) {
 					case '/':
 						return 'light'

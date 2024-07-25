@@ -8,18 +8,8 @@ export class Mailer {
 				service: 'gmail',
 				auth: {
 					user: process.env.MAIL_USERNAME,
-					pass: process.env.MAIL2_PASSWORD
+					pass: process.env.MAIL_PASSWORD
 				}
-				// host: 'smtp.gmail.com',
-				// port: 465,
-				// auth: {
-				// 	type: 'OAuth2',
-				// 	user: process.env.MAIL_USERNAME,
-				// 	pass: process.env.MAIL_PASSWORD,
-				// 	clientId: process.env.OAUTH_CLIENTID,
-				// 	clientSecret: process.env.OAUTH_CLIENT_SECRET,
-				// 	refreshToken: process.env.OAUTH_REFRESH_TOKEN
-				// }
 			}
 		);
 	}
@@ -28,7 +18,7 @@ export class Mailer {
 		let body = 'Contact request from ' + name
 		body += '\nEmail address: ' + email
 		body += '\nPhone number: ' + phoneNumber
-		body += '\nMessage: ' + message
+		body += '\n\nMessage: ' + message
 		
 		return this.#sendEmail(
 			CONTACT_EMAILS,

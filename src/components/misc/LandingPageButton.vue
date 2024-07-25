@@ -13,11 +13,12 @@
 
 <style scoped>
 	button {
-		border: 5px var(--turtle-nest-secondary) solid;
-		color: var(--turtle-nest-secondary);
+		border: 6px var(--button-accent) solid;
+		color: var(--button-accent);
 		border-radius: 0;
-		font: 600 20px Anybody;
-		padding: 16px 30px;
+		font: 600 20px Lexend;
+		text-transform: uppercase;
+		padding: 10px 24px;
 		cursor: pointer;
 		flex: 0;
 		background: none;
@@ -39,7 +40,7 @@
 		right: 0;
 		height: 0;
 		width: 100%;
-		background: var(--turtle-nest-secondary);
+		background: var(--button-accent);
 		z-index: -1;
 	}
 	

@@ -55,6 +55,7 @@
 		height: 100%;
 		z-index: 1;
 		position: relative;
+		--button-accent: var(--turtle-nest-secondary);
 	}
 	
 	.scroll-content {

@@ -9,9 +9,19 @@
 
 <template>
 	<div class="landing-page-content">
+		<slot name="background"></slot>
+		<div class="overlay"></div>
 		<div class="title">
 			<slot name="title"></slot>
+			<div class="overlay-title-effect" v-if="$slots.overlayTitle">
+				<slot name="overlayTitle"></slot>
+			</div>
+			<div v-if="$slots.overlayTitle" class="overlay-title-lightener">
+				<slot name="overlayTitle"></slot>
+			</div>
 		</div>
+		
+
 <!--		<div class="description">-->
 <!--			<slot name="description"></slot>-->
 <!--		</div>-->
@@ -48,6 +58,22 @@
 		color: var(--turtle-nest-primary);
 		margin-bottom: 20px;
 		text-shadow: 0 0 20px rgba(0,0,0,0.3);
+		position: relative;
+		text-align: center;
+	}
+	
+	.overlay-title-effect {
+		color: white;
+		mix-blend-mode: overlay;
+	}
+	
+	.overlay-title-lightener {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: white;
+		box-shadow: none;
+		opacity: 0.2;
 	}
 	
 	.description {
@@ -57,7 +83,7 @@
 		margin-bottom: 40px;
 	}
 	
-	img, svg {
+	svg {
 		position: fixed;
 		bottom: 20px;
 		margin: auto;
@@ -65,5 +91,22 @@
 		right: 0;
 		transform: scale(0.8);
 		opacity: 0.8;
+	}
+	
+	:deep(.background-image), :deep(.overlay) {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+
+	}
+	
+	:deep(.background-image) {
+		z-index: -3;
+		object-fit: cover;
+	}
+	
+	:deep(.overlay) {
+		z-index: -2;
 	}
 </style>
