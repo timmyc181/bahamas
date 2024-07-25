@@ -17,7 +17,7 @@ app.use(express.json())
 
 const mailer = new Mailer()
 
-app.post('/send-contact-email',(req, res, next) => {
+app.post('/api/send-contact-email',(req, res, next) => {
 	let data = req.body
 	mailer.contactEmail(data.firstName + ' ' + data.lastName, data.email, data.phoneNumber, data.message)
 		.then(r => res.send(r))

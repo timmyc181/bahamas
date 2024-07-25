@@ -19,7 +19,7 @@
 		},
 		methods: {
 			contact(data) {
-				this.$http.post('/send-contact-email', data)
+				this.$http.post('/api/send-contact-email', data)
 					.then(res => {
 					})
 					.catch(error => {
