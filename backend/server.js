@@ -27,5 +27,8 @@ app.post('/send-contact-email',(req, res, next) => {
 app.get('/*', (req, res) => {
 	res.sendFile(resolve(__dirname, '../dist/index.html'))
 })
-app.listen(process.env.PORT || 8000, () => {
+
+const port = process.env.PORT || 8000
+app.listen(port, () => {
+	console.log(`Listening on http://localhost:${port}`)
 })

@@ -6,16 +6,20 @@ export class Mailer {
 	constructor() {
 		this.transporter = nodemailer.createTransport({
 				service: 'gmail',
-				host: 'smtp.gmail.com',
-				// port: 465,
 				auth: {
-					type: 'OAuth2',
 					user: process.env.MAIL_USERNAME,
-					pass: process.env.MAIL_PASSWORD,
-					clientId: process.env.OAUTH_CLIENTID,
-					clientSecret: process.env.OAUTH_CLIENT_SECRET,
-					refreshToken: process.env.OAUTH_REFRESH_TOKEN
+					pass: process.env.MAIL2_PASSWORD
 				}
+				// host: 'smtp.gmail.com',
+				// port: 465,
+				// auth: {
+				// 	type: 'OAuth2',
+				// 	user: process.env.MAIL_USERNAME,
+				// 	pass: process.env.MAIL_PASSWORD,
+				// 	clientId: process.env.OAUTH_CLIENTID,
+				// 	clientSecret: process.env.OAUTH_CLIENT_SECRET,
+				// 	refreshToken: process.env.OAUTH_REFRESH_TOKEN
+				// }
 			}
 		);
 	}
