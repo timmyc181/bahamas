@@ -12,7 +12,7 @@
 	<nav :class="headerStyle">
 		<div class="leading">
 			<RouterLink to="/">
-				<img src="@/assets/logo.svg" alt="logo" height="20"/>
+				<img src="@/assets/storr-villas.svg" alt="logo" height="25"/>
 			</RouterLink>
 		</div>
 		
@@ -32,10 +32,8 @@
 <style scoped>
 	nav {
 		display: flex;
-		
 		width: 100%;
 		padding: 30px var(--side-padding) 0;
-		position: relative;
 	}
 	
 	nav *,

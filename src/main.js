@@ -3,7 +3,7 @@ import AboutPage from '@/components/AboutPage.vue'
 import ContactPage from '@/components/ContactPage.vue'
 import Dock from '@/components/dock/Dock.vue'
 import LandingPage from '@/components/LandingPage.vue'
-import TurtlesNest from '@/components/turtles_nest/TurtlesNest.vue'
+import TurtlesNest from '@/components/turtles-nest/TurtlesNest.vue'
 import axios from 'axios'
 
 import { createApp } from 'vue'

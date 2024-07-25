@@ -18,14 +18,21 @@
 		<LandingPageButton>
 			<slot name="action"></slot>
 		</LandingPageButton>
+		
 	</div>
+	<svg width="20" height="39" viewBox="0 0 20 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M10 0L10 37" stroke="white" stroke-width="3"/>
+		<path d="M18.887 27.8869L10 36.7739L1.1131 27.8869" stroke="white" stroke-width="3"/>
+	</svg>
+	
+<!--	<img src="@/assets/scroll-arrow.svg" alt="scroll-arrow"/>-->
 </template>
 
 <style scoped>
 	.landing-page-content {
 		display: flex;
 		flex-direction: column;
-		position: absolute;
+		position: fixed;
 		justify-content: center;
 		align-items: center;
 		bottom: 0;
@@ -48,5 +55,15 @@
 		color: white;
 		opacity: 0.9;
 		margin-bottom: 40px;
+	}
+	
+	img, svg {
+		position: fixed;
+		bottom: 20px;
+		margin: auto;
+		left: 0;
+		right: 0;
+		transform: scale(0.8);
+		opacity: 0.8;
 	}
 </style>
