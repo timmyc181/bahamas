@@ -19,7 +19,14 @@ const mailer = new Mailer()
 
 app.post('/api/send-contact-email',(req, res, next) => {
 	let data = req.body
-	mailer.contactEmail(data.firstName + ' ' + data.lastName, data.email, data.phoneNumber, data.message)
+	mailer.contactEmail(data.name, data.email, data.phoneNumber, data.message)
+		.then(r => res.send(r))
+		.catch(e => next(e))
+})
+
+app.post('/api/send-dock-request-email', (req, res, next) => {
+	let data = req.body
+	mailer.dockRequestEmail(data.name, data.email, data.phoneNumber, data.message)
 		.then(r => res.send(r))
 		.catch(e => next(e))
 })

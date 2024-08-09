@@ -12,7 +12,8 @@
 	<nav :class="headerStyle">
 		<div class="leading">
 			<RouterLink to="/">
-				<img src="@/assets/storr-villas.svg" alt="logo" height="16"/>
+				<img v-if="headerStyle === 'light'" src="@/assets/logo-dark.svg" alt="logo" height="24"/>
+				<img v-else src="@/assets/logo-light.svg" alt="logo" height="24"/>
 			</RouterLink>
 		</div>
 		
@@ -45,9 +46,9 @@
 		color: black
 	}
 	
-	nav.light img {
-		filter: invert(1);
-	}
+	/*nav.light img {*/
+	/*	filter: invert(1);*/
+	/*}*/
 	
 	nav.dark a,
 	nav.dark img {

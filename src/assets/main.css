@@ -1,13 +1,40 @@
-@import './base.css';
+:root {
+	--turtle-nest-primary: rgb(197, 255, 134);
+	--turtle-nest-secondary: rgb(252, 255, 153);
+	--dock-secondary: #ffc0b7;
+	
+	--side-padding: 80px;
+	--button-accent: #00b2b2;
+	--card-background: rgba(0, 0, 0, 0.04);
+	
+}
 
-#app {
-	width: 100%;
+@font-face {
+	font-family: Anybody;
+	src: url('./Anybody-Variable.ttf');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Lexend;
+	src: url('./Lexend-Variable.ttf');
+	/*font-weight: bold;*/
+}
+
+html, body {
 	height: 100%;
 }
 
 body {
+	margin: 0;
 	position: relative;
-	/*background: #f9f7f0;*/
+}
+
+* {
+	font-family: Lexend, serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	
 }
 
@@ -23,46 +50,79 @@ body {
 	/*}*/
 }
 
-button {
-	border: 3px var(--button-accent) solid;
-	color: var(--button-accent);
-	border-radius: 0;
-	font: 400 16px Anybody;
-	padding: 12px 24px;
-	cursor: pointer;
-	flex: 0;
-	background: none;
-	position: relative;
-	z-index: 1;
+#app {
+	width: 100%;
+	height: 100%;
 }
 
-button,
-button::after {
-	transition: all 250ms ease;
+button {
+	background: var(--button-accent);
+	color: white;
+	/*border-radius: 0;*/
+	font: bold 16px Lexend;
+	padding: 12px 32px;
+	cursor: pointer;
+	flex: 0;
+	position: relative;
+	z-index: 1;
+	border: none;
+	border-radius: 0;
 }
 
 button::after {
 	content: '';
+	background: rgba(255,255,255,0.1);
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	right: 0;
-	height: 0;
-	width: 100%;
-	background: var(--button-accent);
-	z-index: -1;
+	bottom: 0;
+	z-index: 1;
+	opacity: 0;
+	transition: all 250ms;
 }
 
-button:hover::after {
-	height: 100%;
+button:not([disabled]):hover::after {
+	opacity: 1;
 }
 
-button:hover {
-	color: white;
-	
+input:hover, textarea:hover {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+button[disabled] {
+	background: rgba(0,0,0,0.1);
+	color: rgba(0,0,0,0.3);
+	cursor: default;
+}
+
+input, textarea {
+	background: var(--card-background);
+	border: none;
+	outline: none;
+	font: 500 14px Lexend;
+	position: relative;
+	padding: 14px 20px;
+	border-radius: 0;
+	transition: background-color 250ms;
+}
+
+input::placeholder, textarea::placeholder {
+	color: #717171;
 }
 
 .scroll-content {
 	/*background: #f9f7ef*/
 	background: white
 }
+
+.content-header {
+	font: bold 36px Anybody;
+	margin-bottom: 10px;
+}
+
+.content-text {
+	font: normal 20px Lexend;
+	color: rgba(0,0,0,0.6);
+}
+

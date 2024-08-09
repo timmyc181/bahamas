@@ -11,7 +11,7 @@
 
 <style scoped>
 	span {
-		height: 25px;
+		height: 20px;
 		
 		padding-top: 2px;
 		font-size: 12px;

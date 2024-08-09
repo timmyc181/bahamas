@@ -27,6 +27,19 @@ export class Mailer {
 		)
 	}
 	
+	dockRequestEmail(name, email, phoneNumber, message) {
+		let body = 'Tahiti beach dock request from ' + name
+		body += '\nEmail address: ' + email
+		body += '\nPhone number: ' + phoneNumber
+		body += '\n\nMessage: ' + message
+		
+		return this.#sendEmail(
+			CONTACT_EMAILS,
+			'Storr Villas tahiti beach dock request from ' + name,
+			body
+		)
+	}
+	
 	#sendEmail(emails, subject, message) {
 		let mailOptions = {
 			from: process.env.MAIL_USERNAME,

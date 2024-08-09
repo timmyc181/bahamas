@@ -18,7 +18,6 @@
 		<FullScreenImage :path="imgUrl">
 			<LandingPageContent>
 				<template #title>Turtle Nest</template>
-				<template #description>A cool house</template>
 				<template #action>Book now</template>
 			</LandingPageContent>
 		</FullScreenImage>

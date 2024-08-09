@@ -9,11 +9,10 @@
 		data() {
 			return {
 				schema: object({
-						firstName: string().required('Please enter a first name'),
-						lastName: string().required('Please enter a last name'),
-					email: string().required('Please enter an email').email('Email is invalid'),
-					phoneNumber: string().required('Please enter a phone number'),
-					message: string().required('Please enter a message'),
+					name: string().required('Required'),
+					email: string().required('Required').email('Email is invalid'),
+					phoneNumber: string(),
+					message: string().required('Required'),
 				})
 			}
 		},
@@ -31,25 +30,24 @@
 
 <template>
 	<div class="page">
-		<!--		<div class="main">-->
-		
 		<Form class="main" @submit="contact" :validation-schema="schema" v-slot="{ errors }">
 			<span class="title">Contact</span>
 			
-			<div class="row">
-				<div>
-					<Field name="firstName" placeholder="First name" rules="required"/>
-					<FormErrorMessage :message="errors.firstName"></FormErrorMessage>
-				</div>
-				<div>
-					<Field name="lastName" placeholder="Last name" rules="required"/>
-					<FormErrorMessage :message="errors.lastName"></FormErrorMessage>
-				</div>
-			</div>
+<!--			<div class="row">-->
+<!--				<div>-->
+<!--					<Field name="firstName" placeholder="First name" rules="required"/>-->
+<!--					<FormErrorMessage :message="errors.firstName"></FormErrorMessage>-->
+<!--				</div>-->
+<!--				<div>-->
+<!--					-->
+<!--				</div>-->
+<!--			</div>-->
+			<Field name="name" placeholder="Name" rules="required"/>
+			<FormErrorMessage :message="errors.name"></FormErrorMessage>
 			
 			<Field name="email" type="email" placeholder="Email" rules="required|email"/>
 			<FormErrorMessage :message="errors.email"></FormErrorMessage>
-<!--			<ErrorMessage name="email"/>-->
+			<!--			<ErrorMessage name="email"/>-->
 			<Field name="phoneNumber" v-mask="['(###) ###-####']" placeholder="Phone number"
 				   :rules="'required'"/>
 			<FormErrorMessage :message="errors.phoneNumber"></FormErrorMessage>
@@ -57,7 +55,7 @@
 			<Field as="textarea" name="message" placeholder="Message" rules="required"/>
 			<FormErrorMessage :message="errors.message"></FormErrorMessage>
 			
-			<button>SEND MESSAGE</button>
+			<button>Send message</button>
 		</Form>
 	</div>
 </template>
@@ -75,7 +73,7 @@
 		align-items: stretch;
 		flex-direction: column;
 		flex: 1;
-		max-width: 600px;
+		max-width: 500px;
 	}
 	
 	.main, .row {
@@ -96,25 +94,25 @@
 	}
 	
 	textarea {
-		height: 100px;
+		height: 80px;
 		resize: none;
 	}
 	
-	textarea, input {
-		outline: none;
-		
-		border: 2px #e0e0e0 solid;
-		border-radius: 0;
-		padding: 12px 16px;
-	}
+	/*textarea, input {*/
+	/*	outline: none;*/
+	/*	*/
+	/*	border: 2px #e0e0e0 solid;*/
+	/*	border-radius: 0;*/
+	/*	padding: 12px 16px;*/
+	/*}*/
 	
-	textarea:focus, input:focus {
-		border: 2px #cbcbcb solid;
-		
-	}
+	/*textarea:focus, input:focus {*/
+	/*	border: 2px #cbcbcb solid;*/
+	/*	*/
+	/*}*/
 	
 	.title {
-		font-size: 32px;
+		font-size: 52px;
 		font-family: Anybody;
 		margin-bottom: 10px;
 	}
